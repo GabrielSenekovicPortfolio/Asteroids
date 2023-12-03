@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 78
+  controlID: 63
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AddressableAssetsWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,14 +68,14 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 430, y: 250}
+  m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 14}
   - {fileID: 13}
-  m_Selected: 1
+  m_Selected: 0
   m_LastSelected: 2
 --- !u!114 &4
 MonoBehaviour:
@@ -96,8 +96,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 559
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 83
+  controlID: 68
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 84
+  controlID: 69
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -272,13 +272,13 @@ MonoBehaviour:
     height: 559
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 12}
   - {fileID: 19}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -498,7 +498,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 211
+    ID: 616
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -530,7 +530,7 @@ MonoBehaviour:
       name: Asteroids - Rovio
       fullName: Asteroids - Rovio
       resultStatus: 1
-      duration: 2.283479
+      duration: 2.6814861
       messages: 
       output: 
       stacktrace: 
@@ -542,12 +542,11 @@ MonoBehaviour:
       parentId: 
       parentUniqueId: 
     - id: 1006
-      uniqueId: '[PlayModeTests][F:/My Files/Game Projects/Unity Projects/Asteroids
-        - Rovio/Library/ScriptAssemblies/PlayModeTests.dll][suite]'
+      uniqueId: '[PlayModeTests][F:/My Files/Game Projects/Unity Projects/Asteroids/Library/ScriptAssemblies/PlayModeTests.dll][suite]'
       name: PlayModeTests.dll
-      fullName: F:/My Files/Game Projects/Unity Projects/Asteroids - Rovio/Library/ScriptAssemblies/PlayModeTests.dll
+      fullName: F:/My Files/Game Projects/Unity Projects/Asteroids/Library/ScriptAssemblies/PlayModeTests.dll
       resultStatus: 1
-      duration: 1.7434163
+      duration: 2.1645076
       messages: 
       output: 
       stacktrace: 
@@ -559,11 +558,46 @@ MonoBehaviour:
       parentId: 1000
       parentUniqueId: '[Asteroids - Rovio][suite]'
     - id: 1001
+      uniqueId: PlayModeTests.dll/[PlayModeTests][AsteroidTest][suite]
+      name: AsteroidTest
+      fullName: AsteroidTest
+      resultStatus: 1
+      duration: 2.7575686
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1013
+      parentUniqueId: '[PlayModeTests][F:/My Files/Game Projects/Unity Projects/Asteroids/Library/ScriptAssemblies/PlayModeTests.dll][suite]'
+    - id: 1002
+      uniqueId: PlayModeTests.dll/AsteroidTest/[PlayModeTests][AsteroidTest.AsteroidSplitTest]
+      name: AsteroidSplitTest
+      fullName: AsteroidTest.AsteroidSplitTest
+      resultStatus: 1
+      duration: 2.6475525
+      messages: 
+      output: 'Loading scene ''GameScene'' for testing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayModeTests.dll/[PlayModeTests][AsteroidTest][suite]
+    - id: 1001
       uniqueId: PlayModeTests.dll/[PlayModeTests][EnemyShipTest][suite]
       name: EnemyShipTest
       fullName: EnemyShipTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 2.1732066
       messages: 
       output: 
       stacktrace: 
@@ -576,13 +610,15 @@ MonoBehaviour:
       parentUniqueId: '[PlayModeTests][F:/My Files/Game Projects/Unity Projects/Asteroids
         - Rovio/Library/ScriptAssemblies/PlayModeTests.dll][suite]'
     - id: 1002
-      uniqueId: PlayModeTests.dll/EnemyShipTest/[PlayModeTests][EnemyShipTest.EnemyShipTestSimplePasses]
-      name: EnemyShipTestSimplePasses
-      fullName: EnemyShipTest.EnemyShipTestSimplePasses
-      resultStatus: 0
-      duration: 0
+      uniqueId: PlayModeTests.dll/EnemyShipTest/[PlayModeTests][EnemyShipTest.EnemyShipThrustTest]
+      name: EnemyShipThrustTest
+      fullName: EnemyShipTest.EnemyShipThrustTest
+      resultStatus: 1
+      duration: 0.959745
       messages: 
-      output: 
+      output: 'Loading scene ''GameScene'' for testing
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -593,13 +629,34 @@ MonoBehaviour:
       parentId: 1001
       parentUniqueId: PlayModeTests.dll/[PlayModeTests][EnemyShipTest][suite]
     - id: 1003
-      uniqueId: PlayModeTests.dll/EnemyShipTest/[PlayModeTests][EnemyShipTest.EnemyShipTestWithEnumeratorPasses]
-      name: EnemyShipTestWithEnumeratorPasses
-      fullName: EnemyShipTest.EnemyShipTestWithEnumeratorPasses
-      resultStatus: 0
-      duration: 0
+      uniqueId: PlayModeTests.dll/EnemyShipTest/[PlayModeTests][EnemyShipTest.EnemyShipTurnTest]
+      name: EnemyShipTurnTest
+      fullName: EnemyShipTest.EnemyShipTurnTest
+      resultStatus: 1
+      duration: 0.9753257
       messages: 
-      output: 
+      output: 'Loading scene ''GameScene'' for testing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayModeTests.dll/[PlayModeTests][EnemyShipTest][suite]
+    - id: 1004
+      uniqueId: PlayModeTests.dll/EnemyShipTest/[PlayModeTests][EnemyShipTest.HurtEnemyShipTest]
+      name: HurtEnemyShipTest
+      fullName: EnemyShipTest.HurtEnemyShipTest
+      resultStatus: 1
+      duration: 0.2056048
+      messages: 
+      output: 'Loading scene ''GameScene'' for testing
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -614,7 +671,7 @@ MonoBehaviour:
       name: PlayerTest
       fullName: PlayerTest
       resultStatus: 1
-      duration: 1.6829703
+      duration: 2.1489048
       messages: 
       output: 
       stacktrace: 
@@ -626,17 +683,14 @@ MonoBehaviour:
       parentId: 1006
       parentUniqueId: '[PlayModeTests][F:/My Files/Game Projects/Unity Projects/Asteroids
         - Rovio/Library/ScriptAssemblies/PlayModeTests.dll][suite]'
-    - id: 1005
-      uniqueId: PlayModeTests.dll/PlayerTest/[PlayModeTests][PlayerTest.PlayerThrustTest]
-      name: PlayerThrustTest
-      fullName: PlayerTest.PlayerThrustTest
+    - id: 1006
+      uniqueId: PlayModeTests.dll/PlayerTest/[PlayModeTests][PlayerTest.HurtPlayerTest]
+      name: HurtPlayerTest
+      fullName: PlayerTest.HurtPlayerTest
       resultStatus: 1
-      duration: 1.6406507
+      duration: 1.0457964
       messages: 
       output: 'Loading scene ''GameScene'' for testing
-
-        Player Controller
-        Awake
 
 '
       stacktrace: 
@@ -648,20 +702,94 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1004
       parentUniqueId: PlayModeTests.dll/[PlayModeTests][PlayerTest][suite]
-    m_ResultText: 'PlayerThrustTest (1,641s)
+    - id: 1007
+      uniqueId: PlayModeTests.dll/PlayerTest/[PlayModeTests][PlayerTest.HurtPlayerWithEntityTest]
+      name: HurtPlayerWithEntityTest
+      fullName: PlayerTest.HurtPlayerWithEntityTest
+      resultStatus: 1
+      duration: 1.0531031
+      messages: 
+      output: 'Loading scene ''GameScene'' for testing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: PlayModeTests.dll/[PlayModeTests][PlayerTest][suite]
+    - id: 1007
+      uniqueId: PlayModeTests.dll/PlayerTest/[PlayModeTests][PlayerTest.PlayerHyperdriveTest]
+      name: PlayerHyperdriveTest
+      fullName: PlayerTest.PlayerHyperdriveTest
+      resultStatus: 1
+      duration: 0.194383
+      messages: 
+      output: 'Loading scene ''GameScene'' for testing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: PlayModeTests.dll/[PlayModeTests][PlayerTest][suite]
+    - id: 1005
+      uniqueId: PlayModeTests.dll/PlayerTest/[PlayModeTests][PlayerTest.PlayerThrustTest]
+      name: PlayerThrustTest
+      fullName: PlayerTest.PlayerThrustTest
+      resultStatus: 1
+      duration: 0.779711
+      messages: 
+      output: 'Loading scene ''GameScene'' for testing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: PlayModeTests.dll/[PlayModeTests][PlayerTest][suite]
+    - id: 1006
+      uniqueId: PlayModeTests.dll/PlayerTest/[PlayModeTests][PlayerTest.PlayerTurnTest]
+      name: PlayerTurnTest
+      fullName: PlayerTest.PlayerTurnTest
+      resultStatus: 1
+      duration: 0.7271979
+      messages: 
+      output: 'Loading scene ''GameScene'' for testing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: PlayModeTests.dll/[PlayModeTests][PlayerTest][suite]
+    m_ResultText: 'HurtPlayerTest (0,206s)
 
       ---
 
       Loading scene ''GameScene''
-      for testing
-
-      Player Controller Awake'
+      for testing'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c976ea58
-      m_LastClickedID: 1491760841
-      m_ExpandedIDs: 656bc74c3816df66e41a6467ffffff7f
+      m_SelectedIDs: e217c77a6f6852f7
+      m_LastClickedID: -145594257
+      m_ExpandedIDs: 04473ab4656bc74c3816df66e41a6467514c4673bf3c327affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -904,22 +1032,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Player
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Player
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: F:\My Files\Game Projects\Unity Projects\Asteroids - Rovio
+  m_LastProjectPath: F:\My Files\Game Projects\Unity Projects\Asteroids
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 149}
-    m_SelectedIDs: ce670000
-    m_LastClickedID: 26574
-    m_ExpandedIDs: 000000003667000042670000446700004a67000092670000d06c0000fa73000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: e26a0000
+    m_LastClickedID: 27362
+    m_ExpandedIDs: 00000000e26a0000e46a0000e66a0000006b00000a6b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -947,7 +1075,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000036670000
+    m_ExpandedIDs: 00000000e26a0000e46a0000e66a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1077,7 +1205,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9464ffffc664ffff266dffff366dffff926effffc46effff2477ffff3477ffff9278ffffc478ffff2481ffff3481ffff148affff548affff6c95ffff6e9cffffb49cffff7a9dffffb8a5fffff8a5ffff3aa7ffffa4b5ffffe4b5ffff24b7ffffeebeffff2ebfffff6ec0ffff10ccffff50ccffff92cdffff7cd4ffff7cd5ffffbed6ffff22d8ffff34d9ffff74d9ffffe4d9fffface2ffffc8e2ffffaae5ffff14e6ffff20fbffff8e9a0000ae9a0000
+      m_ExpandedIDs: 72beffffb8beffff16c7ffff26c7ffff20dcffff60dcffff5af1ffff20fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1522,7 +1650,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1

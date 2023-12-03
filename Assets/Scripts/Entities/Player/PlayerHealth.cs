@@ -7,21 +7,16 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IPlayerHealth
 {
     [SerializeField] LayerMask layerMask;
 
-    IExtraLives extraLives;
-    ISceneManager sceneManager;
+    [Inject] IExtraLives extraLives;
+    [Inject] ISceneManager sceneManager;
 
     const int maxAmountOfLives = 10;
     const int startAmountOfLives = 3;
     int currentHP;
 
-    [Inject]
-    public void Initialize(IExtraLives extraLives, ISceneManager sceneManager)
+    private void Awake()
     {
-        this.extraLives = extraLives;
-        this.sceneManager = sceneManager;
-
         currentHP = startAmountOfLives;
-
         extraLives.InitializeExtraLives(maxAmountOfLives, startAmountOfLives);
     }
     public void AddExtraLife()
