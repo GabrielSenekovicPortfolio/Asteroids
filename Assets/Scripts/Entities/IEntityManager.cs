@@ -6,9 +6,9 @@ public interface IEntityManager
 {
     public void StartNewWave();
     public void OnDisableEntity();
-    //Make sure AddEntity is called before OnDisableEntity();
+    public void CacheEntities();
     public void AddEntity(EntityIdentifier entityIdentifier);
-    public EntityIdentifier GetEntityOfType(EntityType entityType);
+    public Entity GetEntityOfType(EntityType entityType);
     public void HideAllEntities();
     public int CountActiveEntitiesOfType(EntityType entityType);
 }

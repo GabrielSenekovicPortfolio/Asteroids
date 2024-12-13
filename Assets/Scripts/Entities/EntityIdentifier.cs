@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntityIdentifier : MonoBehaviour
+public interface EntityIdentifier
 {
-    [SerializeField] EntityType entityType;
-
-    public EntityType GetEntityType
-    {
-        get
-        {
-            return entityType;
-        }
-    }
+    public EntityType GetEntityType { get;}
+    public void Activate();
+    public void Deactivate();
+    public void Position(Vector3 newPosition);
+    public bool IsActive();
 }

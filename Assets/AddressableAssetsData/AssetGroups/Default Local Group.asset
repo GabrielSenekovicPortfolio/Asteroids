@@ -16,7 +16,52 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: b4d0129a02b88924299eab3d88b62a4d
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: dbd6510f0919795418437277c74ef015
+    m_Address: Level 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7810ea77d841bf48badeb2b84c5ef55
+    m_Address: EnemyProjectile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 680beb99381048e409dfc03f21e05bfb
+    m_Address: ENEMYSHIP_BIG
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 036dce8d965969745ba657359a0c14b4
+    m_Address: ENEMYSHIP_SMALL
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8f12c7a6abd25c428c7e31a31cb4995
+    m_Address: ASTEROID_BIG
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6bb5853e179f184aa001dd55551472d
+    m_Address: ASTEROID_MEDIUM
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db15dad060ec1f74b8b6aa8455484c85
+    m_Address: ASTEROID_SMALL
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9efecd7f1cbabd4e9a624017a693225
+    m_Address: PLAYER
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 280b60882d1953b438a1c1ad64ae29a1
+    m_Address: PlayerProjectile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 56879c7268ba8f941941aa465cfec1d9, type: 2}
   m_SchemaSet:

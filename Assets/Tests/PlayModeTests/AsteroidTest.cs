@@ -15,7 +15,7 @@ public class AsteroidTest : SceneTestFixture
     {
         yield return LoadScene("GameScene");
         entityManager.HideAllEntities();
-        EntityIdentifier asteroidObject = entityManager.GetEntityOfType(EntityType.ASTEROID_BIG);
+        Entity asteroidObject = entityManager.GetEntityOfType(EntityType.ASTEROID_BIG);
         Debug.Assert(asteroidObject != null);
         asteroidObject.gameObject.SetActive(true);
         entityManager.AddEntity(asteroidObject);
