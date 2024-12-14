@@ -23,9 +23,10 @@ public class ShootProjectile : MonoBehaviour, IShootProjectile<EntityType>, IDep
     {
         GameObject projectile = projectileContainer.GetProjectile();
         Rigidbody2D projectileBody = projectile.GetComponent<Rigidbody2D>();
-        entityManager.ActivateEntity(GetLastProjectile().GetComponent<EntityIdentifier<EntityType>>().GetEntityType);
+        entityManager.ActivateEntity(projectile.GetComponent<Entity>());
         projectile.transform.position = transform.position;
-        projectileBody.velocity = direction.normalized * (projectileSpeed + addedVelocity);
+        var velocity = direction.normalized * (projectileSpeed + addedVelocity);
+        projectileBody.velocity = velocity;
     }
 
     public GameObject GetLastProjectile()

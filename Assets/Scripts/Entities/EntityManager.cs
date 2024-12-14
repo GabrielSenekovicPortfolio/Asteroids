@@ -164,9 +164,8 @@ public class EntityManager : MonoBehaviour, IEntityManager<EntityType>
         result = newEntities[0].gameObject;
         return result != null;
     }
-    public void ActivateEntity(EntityType entityType)
+    public void ActivateEntity(Entity entity)
     {
-        var entity = spawnedEntities[entityType].FirstOrDefault(e => e.GetEntityType == entityType && !e.gameObject.activeInHierarchy);
         if(entity != null)
         {
             activeEntities.Add(entity);
