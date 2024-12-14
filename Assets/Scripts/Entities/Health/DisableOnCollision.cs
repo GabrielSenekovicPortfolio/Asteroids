@@ -6,7 +6,7 @@ using Zenject;
 
 public class DisableOnCollision : MonoBehaviour, IDamagable
 {
-    [Inject] IEntityManager entityManager;
+    [Inject] IEntityManager<EntityType> entityManager;
 
     [SerializeField] LayerMask layerMask;
 
@@ -17,7 +17,7 @@ public class DisableOnCollision : MonoBehaviour, IDamagable
             score.AddScore();
         }
         gameObject.SetActive(false);
-        entityManager.OnDisableEntity();
+        entityManager.DisableEntity(GetComponent<Entity>());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

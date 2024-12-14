@@ -23,7 +23,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e7810ea77d841bf48badeb2b84c5ef55
-    m_Address: EnemyProjectile
+    m_Address: ENEMY_PROJECTILE
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 280b60882d1953b438a1c1ad64ae29a1
-    m_Address: PlayerProjectile
+    m_Address: PLAYER_PROJECTILE
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

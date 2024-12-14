@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IPlayerFetcher 
+public interface IDependencyGetter<T>
 {
-    public Transform FetchPlayer();
+    List<T> GetDependencies();
 }

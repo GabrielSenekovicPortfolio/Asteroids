@@ -7,11 +7,11 @@ using Random = UnityEngine.Random;
 
 public class SplitApart : MonoBehaviour, IDamagable
 {
-    [Inject] IEntityManager entityManager;
+    [Inject] IEntityManager<EntityType> entityManager;
 
     [SerializeField] LayerMask layerMask;
 
-    IShootProjectile shootProjectile;
+    IShootProjectile<EntityType> shootProjectile;
 
     public void TakeDamage(int value = 1)
     {
@@ -20,23 +20,23 @@ public class SplitApart : MonoBehaviour, IDamagable
             Vector2 randomDirection = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
             float addedVelocity = Random.Range(1.0f, 2.0f);
             shootProjectile.Shoot(randomDirection.normalized, addedVelocity);
-            entityManager.AddEntity(shootProjectile.GetLastProjectile().GetComponent<EntityIdentifier>());
         }
         if (TryGetComponent(out IScore score))
         {
             score.AddScore();
         }
+        GetComponent<Collider2D>().enabled = false;
         gameObject.SetActive(false);
-        entityManager.OnDisableEntity();
+        entityManager.DisableEntity(GetComponent<Entity>());
     }
 
     private void Awake()
     {
-        shootProjectile = GetComponent<IShootProjectile>();
+        shootProjectile = GetComponent<IShootProjectile<EntityType>>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (layerMask == (layerMask | (1 << collision.gameObject.layer)))
+        if (layerMask == (layerMask | (1 << collision.gameObject.layer)) && gameObject.activeInHierarchy)
         {
             TakeDamage();
         }

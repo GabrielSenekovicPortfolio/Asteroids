@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4005578922323759320}
   - component: {fileID: -442931662311006586}
   - component: {fileID: 3093159041800078349}
+  - component: {fileID: 4652494288013200352}
   m_Layer: 0
   m_Name: PlayerSpaceship
   m_TagString: Player
@@ -66,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Default
   m_DefaultActionMap: Main
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -95,12 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 10
-  projectileContainer:
-    projectiles:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+  projectiles: f4010000f4010000f4010000f4010000
 --- !u!114 &8957073097889752754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +137,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &8957073097889752756
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -257,3 +253,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rendererToWrap: {fileID: 8957073097889752756}
+--- !u!114 &4652494288013200352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957073097889752767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a842977485a964792419cc9e7cda5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: 1

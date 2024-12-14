@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 2159936196323572156}
   - component: {fileID: 6135507924975404753}
   - component: {fileID: 4662993730647591673}
-  - component: {fileID: 5133861600574115269}
   - component: {fileID: 1320672456037549690}
+  - component: {fileID: 1492751154223789742}
   m_Layer: 7
   m_Name: Asteroid Big
   m_TagString: Untagged
@@ -31,13 +31,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8257897097629062461}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8575922187809654077
 MonoBehaviour:
@@ -116,6 +116,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -139,6 +158,12 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -156,11 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 1
-  projectileContainer:
-    projectiles:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+  projectiles: 640000006400000064000000
 --- !u!114 &4662993730647591673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,19 +195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rendererToWrap: {fileID: 7357271415546211556}
---- !u!114 &5133861600574115269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257897097629062461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf59edbb95bc904da7861c8ccdb4a5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityType: 2
 --- !u!114 &1320672456037549690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +208,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 20
+--- !u!114 &1492751154223789742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8257897097629062461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a842977485a964792419cc9e7cda5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: 2

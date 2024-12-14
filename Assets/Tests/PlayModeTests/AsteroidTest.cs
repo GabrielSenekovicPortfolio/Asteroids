@@ -8,7 +8,7 @@ using System.Linq;
 [TestFixture]
 public class AsteroidTest : SceneTestFixture
 {
-    [Inject] IEntityManager entityManager;
+    [Inject] IEntityManager<EntityType> entityManager;
 
     [UnityTest]
     public IEnumerator AsteroidSplitTest()
@@ -18,7 +18,7 @@ public class AsteroidTest : SceneTestFixture
         Entity asteroidObject = entityManager.GetEntityOfType(EntityType.ASTEROID_BIG);
         Debug.Assert(asteroidObject != null);
         asteroidObject.gameObject.SetActive(true);
-        entityManager.AddEntity(asteroidObject);
+       // entityManager.AddEntity(asteroidObject);
         IDamagable damagable = asteroidObject.GetComponent<IDamagable>();
         damagable.TakeDamage();
         yield return new WaitForSeconds(0.5f);

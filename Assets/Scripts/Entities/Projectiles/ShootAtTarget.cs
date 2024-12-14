@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements.Experimental;
 using Zenject;
 
 public class ShootAtTarget : MonoBehaviour, IShootAtTarget
 {
-    IShootProjectile shootProjectile;
+    IShootProjectile<EntityType> shootProjectile;
     IMovement movement;
 
     Transform target;
@@ -15,10 +16,20 @@ public class ShootAtTarget : MonoBehaviour, IShootAtTarget
     [SerializeField] float shootTimerMax;
     float shootTimer;
 
-    [Inject]
-    public void Init(IPlayerFetcher playerFetcher)
+    private void Awake()
     {
-        SetTarget(playerFetcher.FetchPlayer());
+        movement = GetComponent<IMovement>();
+        shootProjectile = GetComponent<IShootProjectile<EntityType>>();
+    }
+
+    public void Start()
+    {
+        var hits = Physics2D.OverlapCircleAll(transform.position, 1000);
+        var player = hits.FirstOrDefault(c => c.gameObject.GetComponent<PlayerController>());
+        if (player != null)
+        {
+            SetTarget(player.transform);
+        }
     }
 
 
@@ -46,12 +57,6 @@ public class ShootAtTarget : MonoBehaviour, IShootAtTarget
     public void Shoot()
     {
         shootProjectile.Shoot(movement.GetFacingDirection());
-    }
-
-    private void Awake()
-    {
-        movement = GetComponent<IMovement>();
-        shootProjectile = GetComponent<IShootProjectile>();
     }
 
     private void Update()

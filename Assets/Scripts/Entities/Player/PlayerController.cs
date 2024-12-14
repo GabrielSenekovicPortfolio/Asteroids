@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     [Inject] IGameExiter gameExiter;
 
-    IShootProjectile shootProjectile;
+    IShootProjectile<EntityType> shootProjectile;
     PlayerMovement movement;
 
     private void Awake()

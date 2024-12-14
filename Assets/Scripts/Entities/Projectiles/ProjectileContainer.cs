@@ -1,27 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 [System.Serializable]
-public class ProjectileContainer
+public class ProjectileContainer<T> where T : Enum
 {
-    [SerializeField] List<GameObject> projectiles = new List<GameObject>();
+    List<GameObject> projectiles = new List<GameObject>();
 
     int currentIndex = 0;
 
-    public void Start()
+    public void Start(List<T> entities, IEntityManager<T> entityManager)
     {
-        for(int i = 0; i < projectiles.Count; i++)
+        for(int i = 0; i < entities.Count; i++)
         {
-            projectiles[i].SetActive(false);
+            entityManager.AddEntity(entities[i], out GameObject result);
+            result.SetActive(false);
+            projectiles.Add(result);
         }
     }
     public GameObject GetProjectile()
     {
+        if(projectiles.Count == 0) { return null; }
         currentIndex++;
         currentIndex %= projectiles.Count;
         GameObject projectile = projectiles[currentIndex];
-        projectile.SetActive(true);
         return projectile;
     }
     public GameObject GetLastProjectile()

@@ -24,16 +24,24 @@ public class InGameInstaller : MonoInstaller<InGameInstaller>
         Container.Bind<IWrappingManager>().FromComponentInHierarchy().AsSingle();
         Container.Bind<IExtraLives>().FromComponentInHierarchy().AsSingle();
         Container.Bind<IScoreManager>().FromComponentInHierarchy().AsSingle();
-        Container.Bind<IPlayerFetcher>().FromComponentInHierarchy().AsSingle();
-        Container.Bind<IEntityManager>().FromComponentInHierarchy().AsSingle();
+        Container.Bind<IEntityManager<EntityType>>().FromComponentInHierarchy().AsSingle();
         Container.Bind<ILevelManager>().FromComponentInHierarchy().AsSingle();
     }
     public bool SpawnEntities(Entity prefab, Transform transform, int amount, out List<Entity> spawnedEntities)
     {
+        Debug.Assert(prefab != null);
         spawnedEntities = new List<Entity>();
         for(int i = 0; i < amount; i++)
         {
-            spawnedEntities.Add(Container.InstantiatePrefab(prefab, transform).GetComponent<Entity>());
+            GameObject newEntity = Container.InstantiatePrefab(prefab, transform);
+            if(newEntity.TryGetComponent(out Entity entity))
+            {
+                spawnedEntities.Add(entity);
+            }
+            else
+            {
+                Debug.LogError("Couldn't get Entity class from: " + newEntity.name);
+            }
         }
         return spawnedEntities.Count > 0;
     }

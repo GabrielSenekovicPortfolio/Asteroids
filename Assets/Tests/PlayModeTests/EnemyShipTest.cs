@@ -9,7 +9,7 @@ using Zenject;
 [TestFixture]
 public class EnemyShipTest : SceneTestFixture
 {
-    [Inject]IEntityManager entityManager;
+    [Inject]IEntityManager<EntityType> entityManager;
     [UnityTest]
     public IEnumerator EnemyShipThrustTest()
     {

@@ -6,10 +6,10 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using DG.Tweening;
 using Zenject;
 using System.Threading.Tasks;
-
+[DisallowMultipleComponent]
 public class LevelManager : MonoBehaviour, ILevelManager
 {
-    [Inject] IEntityManager entityManager;
+    [Inject] IEntityManager<EntityType> entityManager;
 
     Level currentLevel;
     int levelIndex;
@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour, ILevelManager
         levelIndex++;
     }
 
-    async System.Threading.Tasks.Task<Level> LoadLevelAsync(string levelKey)
+    async Task<Level> LoadLevelAsync(string levelKey)
     {
         AsyncOperationHandle<Level> handle = Addressables.LoadAssetAsync<Level>(levelKey);
         await handle.Task;
